@@ -5,20 +5,20 @@ This work allows optical character recognition of the Devanagari script, handwri
 
 We have also used boosting technique over the neural network for achieving more significant outcomes. We trained five neural networks with different number and type of layers, filters and pool size in the convolutional layer, dropout rate and the number of neurons in the dense layer. Then, while performing recognition, each neural network is first used for prediction separately, and then voting among them is performed. The one which occurred more frequently is chosen as the final prediction, resulting in better precision.
 
-Sample images used for character recognition can be found in the [Words](https://github.com/milind-prajapat/Devanagari-Character-Recognition/tree/main/Words) directory of the repository.
+Sample images used for character recognition can be found in the [Words](https://github.com/tech-wiz18/Devanagari-Character-Recognition/tree/main/Words) directory of the repository.
 
 ## Instructions To Use
-To perform character recognition, accumulate the images in a directory and then provide the complete path to the directory in [Main.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Main.py).
+To perform character recognition, accumulate the images in a directory and then provide the complete path to the directory in [Main.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Main.py).
 
-You can then either run the code directly on the visual studio using [Devanagari-Character-Recognition.sln](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Devanagari-Character-Recognition.sln) or can run [Main.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Main.py).
+You can then either run the code directly on the visual studio using [Devanagari-Character-Recognition.sln](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Devanagari-Character-Recognition.sln) or can run [Main.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Main.py).
 
 ## Structure
-* [Split_Words.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Split_Words.py) is used for performing word segmentation, helpful in achieving character recognition of paragraphs
-* [Split_Characters.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Split_Characters.py) is used for performing character segmentation, helpful in achieving character recognition of a word
-* [Predict_Characters.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Predict_Characters.py) is used for taking the prediction of a character using the boosting technique
-* [Split_Dataset.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Split_Dataset.py) is used for splitting the dataset into training and validation sets
-* [Model_1.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Model_1.py), [Model_2.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Model_2.py), [Model_3.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Model_3.py), [Model_4.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Model_4.py), [Model_5.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Model_5.py) are used for training different convolution neural networks
-* [Evaluate_Model.py](https://github.com/milind-prajapat/Devanagari-Character-Recognition/blob/main/Evaluate_Model.py) is used for evaluating and comparing the performance of different convolution neural networks
+* [Split_Words.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Split_Words.py) is used for performing word segmentation, helpful in achieving character recognition of paragraphs
+* [Split_Characters.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Split_Characters.py) is used for performing character segmentation, helpful in achieving character recognition of a word
+* [Predict_Characters.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Predict_Characters.py) is used for taking the prediction of a character using the boosting technique
+* [Split_Dataset.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Split_Dataset.py) is used for splitting the dataset into training and validation sets
+* [Model_1.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Model_1.py), [Model_2.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Model_2.py), [Model_3.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Model_3.py), [Model_4.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Model_4.py), [Model_5.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Model_5.py) are used for training different convolution neural networks
+* [Evaluate_Model.py](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Evaluate_Model.py) is used for evaluating and comparing the performance of different convolution neural networks
 
 ## Character Extraction
 **Gif 01.** Word Segmentation 
@@ -42,7 +42,7 @@ You can then either run the code directly on the visual studio using [Devanagari
 | Model_5    |       0.9836    |       0.9838    |    0.9836  |  0.9836 |
 | Boosting   |       0.9932    |       0.9933    |    0.9932  |  0.9932 |
 
-**Table 02.** Classification Report on [Sample Images](https://github.com/milind-prajapat/Devanagari-Character-Recognition/tree/main/Words)
+**Table 02.** Classification Report on [Sample Images](https://github.com/tech-wiz18/Devanagari-Character-Recognition/tree/main/Words)
 
 |  | accuracy_score | precision_score | recall_score | f1_score|
 | --- | :---: | :---: | :---: | ---: |
@@ -64,7 +64,7 @@ Boosting     |     0.8571      |     0.9444    |    0.8571  |  0.8862
 ## Limitations
 1. *vyanjans* having a *matra* cannot be segmented
 2. Numerals and *matra* are not included in the dataset and hence can not be determined
-3. Words with excess noise like [this]https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Words/8.jpg) and highly slanted words might hinder efficiency
+3. Words with excess noise like [this](https://github.com/tech-wiz18/Devanagari-Character-Recognition/blob/main/Words/8.jpg) and highly slanted words might hinder efficiency
 
 ## References
 * [Handwritten Devanagari Characters](https://drive.google.com/file/d/1kVn8-Cf1RnnePqfxpCnLSt1rxm2eSfh4/view?usp=sharing)
